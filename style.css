@@ -1,0 +1,260 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 82.5%;
+}
+
+body {
+    font-family: cursive;
+	position: fixed;
+    box-sizing: border-box;
+    background: linear-gradient(
+      rgba(0,0,0,0.7),
+      rgba(0,0,0,0.7)),
+      url(https://i.imgur.com/2tICAIt.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center / cover;
+    background-attachment: fixed;
+    color: #FF7256;
+}
+
+.main {
+    height: 200vh;
+    padding: 10 10 170rem 10;
+}
+
+.text-box {
+    position: relative;
+    top: 4rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.main h1 {
+    letter-spacing: 0.5rem;
+    font-size: 10px;
+}
+
+.main h2 {
+    padding: 0 2rem;
+    letter-spacing: 0.5rem;
+    font-size: 4rem;
+    font-family: 'Lato', sans-serif;
+}
+
+#green {
+    color: orangered;
+}
+
+.main h3 {
+    margin-top: 3rem;
+    display: inline-block;
+    font-size: 6rem;
+    font-family: 'Share Tech Mono', monospace;
+    color: #ffff00;
+    border-bottom: .3rem dotted orangered;
+}
+
+.logo {
+    width: 4rem;
+    margin-bottom: 50px;
+}
+
+.flex {
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.main-2 {
+    height: 100vh;
+    background: #ec5f64;
+}
+
+.sock {
+    display: inline-block;
+    width: 10rem;
+    height: 10rem;
+    margin-top: 8rem;
+    transition: all .2s ease-out;
+  transform-origin: 50% 0;
+}
+
+.animate-m {
+    animation: m 5s ease-out infinite;
+}
+
+.animate-mf {
+    animation: mf 4s ease-out infinite;
+}
+
+.animate-ms {
+    animation: ms 6s ease-out infinite;
+}
+
+@keyframes m {
+    0% {
+        transform: rotate(15deg);
+    }
+
+    50% {
+        transform: rotate(-20deg);
+    }
+
+    100% {
+        transform: rotate(15deg);
+    }
+}
+
+@keyframes mf {
+    0% {
+        transform: rotate(-15deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(-15deg);
+    }
+}
+
+@keyframes ms {
+    0% {
+        transform: rotate(15deg);
+    }
+
+    50% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(15deg);
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    html {
+        font-size: 30%;
+    }
+
+    .text-box {
+        top: 10%;
+    }
+
+    .sock {
+        width: 14rem;
+        height: 14rem;
+    }
+}
+.light-rope {
+  text-align: centre;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  margin: 55px 0 0 0;
+  padding: 0;
+  pointer-events: none;
+  width: 100%;
+}
+.light-rope li {
+  position: relative;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 12px;
+  height: 28px;
+  border-radius: 50%;
+  margin: 20px;
+  display: inline-block;
+  background: #00f7a5;
+  box-shadow: 0px 4.6666666667px 24px 3px #00f7a5;
+  animation-name: flash-1;
+  animation-duration: 0.5s;
+}
+.light-rope li:nth-child(2n+1) {
+  background: aqua;
+  box-shadow: 0px 4.6666666667px 24px 3px aqua;
+  animation-name: flash-2;
+  animation-duration: 1s;
+}
+.light-rope li:nth-child(4n+1) {
+  background: #f70094;
+  box-shadow: 0px 4.6666666667px 24px 3px #f70094;
+  animation-name: flash-3;
+  animation-duration: -1s;
+}
+.light-rope li:before {
+  content: "";
+  position: absolute;
+  background: #222;
+  width: 10px;
+  height: 9.3333333333px;
+  border-radius: 3px;
+  top: -7px;
+  left: 1px;
+}
+.light-rope li:after {
+  content: "";
+  top: -10px;
+  left: 9px;
+  position: absolute;
+  width: 52px;
+  height: 18.6666666667px;
+  border-bottom: solid red 2px;
+  border-radius: 50%;
+}
+.light-rope li:last-child:after {
+  content: none;
+}
+.light-rope li:first-child {
+  margin-left: -40px;
+}
+
+@keyframes flash-1 {
+  0%, 100% {
+    background: #00f7a5;
+    box-shadow: 0px 4.6666666667px 24px 3px #00f7a5;
+  }
+  50% {
+    background: rgba(0, 247, 165, 0.4);
+    box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 247, 165, 0.2);
+  }
+}
+@keyframes flash-2 {
+  0%, 100% {
+    background: aqua;
+    box-shadow: 0px 4.6666666667px 24px 3px aqua;
+  }
+  50% {
+    background: rgba(0, 255, 255, 0.4);
+    box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 255, 255, 0.2);
+  }
+}
+@keyframes flash-3 {
+  0%, 100% {
+    background: #f70094;
+    box-shadow: 0px 4.6666666667px 24px 3px #f70094;
+  }
+  50% {
+    background: rgba(247, 0, 148, 0.4);
+    box-shadow: 0px 4.6666666667px 24px 3px rgba(247, 0, 148, 0.2);
+  }
+}
+.title h1 {
+  position: relative;
+  padding-top: 0px;
+  text-align: center;
+  color: gold;
+  font-family: "Roboto", cursive;
+  font-size: 5rem;
+}
